@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  background-color: #111; /* Fondo oscuro típico de pub */
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Efecto Grafiti */
+.graffiti-text {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 3rem;
+  color: #fff;
+  transform: rotate(-2deg);
+}
+
+/* Efectos Neón */
+.neon-pink {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #ff00de, 0 0 40px #ff00de, 0 0 80px #ff00de;
+}
+
+.neon-blue {
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #00e5ff, 0 0 40px #00e5ff, 0 0 80px #00e5ff;
+}
+
+/* Navegación */
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-bottom: 2px solid #ff00de;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Contenedores */
+.container {
+  padding: 40px;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 50px;
+}
+
+input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ff00de;
+  background: transparent;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  font-family: 'Permanent Marker', cursive;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #00e5ff;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00e5ff inset;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #00e5ff;
+  color: #111;
+}
+.carta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Bloque de cada categoría */
+.categoria-card {
+  background: rgba(20, 20, 20, 0.6);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Neones más pequeños para los títulos de las categorías */
+.neon-cat-pink {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #ff00de, 0 0 20px #ff00de;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.neon-cat-blue {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #00e5ff, 0 0 20px #00e5ff;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Diseño de cada producto (Nombre ................... Precio) */
+.producto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+.producto-nombre {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+.producto-linea {
+  flex-grow: 1;
+  border-bottom: 1px dotted #444;
+  margin: 0 10px;
+}
+
+.producto-precio {
+  font-family: 'Permanent Marker', cursive;
+  color: #00e5ff;
+  text-shadow: 0 0 5px rgba(0, 229, 255, 0.5);
+}
+
+/* Ajustes para móviles muy pequeños */
+@media (max-width: 480px) {
+  .graffiti-text {
+    font-size: 2.2rem;
+  }
+  .neon-cat-pink, .neon-cat-blue {
+    font-size: 1.5rem;
+  }
+  .producto-item {
+    font-size: 1rem;
+  }
+}

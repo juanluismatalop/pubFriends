@@ -67,7 +67,7 @@ export default function Carta() {
                     <div className="producto-linea"></div>
                     <span className="producto-precio">{producto.precio}</span>
                   </div>
-                ))
+                ))//pi
               }
             </div>
           ))}
